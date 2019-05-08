@@ -72,7 +72,9 @@ static NSInteger const defaultCount = 3;
 }
 
 - (void)addCycleTimer {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(scrollCollectionView) userInfo:nil repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(scrollCollectionView) userInfo:nil repeats:YES];
+    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    [runloop addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)removeCycleTimer {

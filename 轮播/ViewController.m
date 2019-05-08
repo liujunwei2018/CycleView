@@ -29,6 +29,10 @@
     cycleView.pageControl.currentPageIndicatorTintColor = UIColor.orangeColor;
     cycleView.pageControl.pageIndicatorTintColor = UIColor.grayColor;
     [self.view addSubview:cycleView];
+    
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(30, 350, self.view.bounds.size.width - 60, 100)];
+    [self.view addSubview:textView];
+    textView.text = @"jsadhfasdfjabfnbfdsajkfbfdsajbv xcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,sxcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,sxcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,sxcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,sxcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,sxcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,sxcbviaurhwuhrkjasdfjkdshfjkahjaksdhfjdkashfajkshjksabfjbadsfbasnmfbmsanbfmasndbfmasnbfnmasdb,bfmndasbfsbam,s";
 }
 
 - (void)cycleView:(LJW_CycleView *)cycleView didSelectItemAtIndex:(NSInteger)index {
