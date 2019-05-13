@@ -67,6 +67,9 @@ static NSInteger const defaultCount = 3;
 - (void)setupSubViews {
     self.backgroundColor = UIColor.whiteColor;
     [self addSubview:self.collectionView];
+    // 设置初始位置,这样实现右滑显示
+    CGFloat offsetX = kViewWidth * 5000;
+    [self.collectionView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
     [self addSubview:self.pageControl];
 }
@@ -89,14 +92,6 @@ static NSInteger const defaultCount = 3;
     CGFloat offsetX = kViewWidth + currentOffsetX;
     [self.collectionView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
-
-//- (void)pageControlValueChange:(UIPageControl *)pageControl {
-//    NSLog(@"%d",(int)pageControl.currentPage);
-//    CGFloat currentOffsetX = self.collectionView.contentOffset.x;
-//    CGFloat offsetX = (pageControl.currentPage - self.currentPage) * kViewWidth + currentOffsetX;
-//    [self.collectionView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
-//    self.currentPage = pageControl.currentPage;
-//}
 
 #pragma mark UICollectionViewDelegate, UICollectionViewDataSource
 
